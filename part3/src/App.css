@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* root font-size using base default form browser for user able to zoom in / out */
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.75%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+
+.app {
+  padding: 2rem;
+}
+
+header,
+section {
+  margin-bottom: 2rem;
+}
+
+.app__topic h3 {
+  margin-bottom: 1rem;
+}
+
+.app__topic button {
+  margin-right: 1rem;
+}
+
+.app__content h3 {
+  margin-bottom: 1rem;
+}
+
+.app__content--body {
+  padding: 2rem;
+  border: 0.1rem solid grey;
+  min-height: 30vh;
+}

@@ -1,0 +1,9 @@
+.counter__display {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+
+.counter button {
+  width: 6rem;
+  margin-right: 0.6rem;
+}
