@@ -1,0 +1,14 @@
+.demo h1 {
+  margin-bottom: 1rem;
+}
+
+.demo button {
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  margin-right: 0.6rem;
+}
+
+.life-cycle {
+  padding: 0.6rem;
+  font-size: 2rem;
+}

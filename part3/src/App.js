@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Counter from './components/Counter';
+import EffectDemo from './components/EffectDemo';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
         <h3>content</h3>
         <div className="app__content--body">
           {topic === USE_STATE && <Counter />}
+          {topic === USE_EFFECT && <EffectDemo />}
         </div>
       </section>
     </div>
