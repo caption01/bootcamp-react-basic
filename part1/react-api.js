@@ -7,10 +7,10 @@ function buttonElement() {
   return button;
 }
 
-function App() {
+function app() {
   return React.createElement('div', {}, [
-    <h1>Welcome To React With API</h1>,
-    <h3>Button Label</h3>,
+    'Welcome To React With API',
+    'Button Label',
     buttonElement(),
   ]);
 }
@@ -20,4 +20,4 @@ function App() {
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
-root.render(<App />);
+root.render(app());
