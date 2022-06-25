@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+
+import { TopicContext, USE_STATE } from '../../context';
 
 import './EffectDemo.css';
 
 const LifeCycleDemo = ({ random }) => {
+  const { setTopic } = useContext(TopicContext);
   // side effect render every-time
   useEffect(() => {
     console.log('I am side effect !');
@@ -18,9 +21,14 @@ const LifeCycleDemo = ({ random }) => {
     console.log('I am effect with deps !', random);
   }, [random]);
 
+  const changeTopic = () => {
+    setTopic(USE_STATE);
+  };
+
   return (
     <div className="life-cycle">
       <p>I am a demo!</p>
+      <button onClick={changeTopic}>Swtich-To-State-Topic</button>
     </div>
   );
 };

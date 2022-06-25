@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import App from './App';
+import { TopicProvider } from './context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <TopicProvider>
+      <App />
+    </TopicProvider>
   </React.StrictMode>
 );

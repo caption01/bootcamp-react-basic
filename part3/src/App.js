@@ -1,15 +1,13 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 
 import Counter from './components/Counter';
 import EffectDemo from './components/EffectDemo';
+import { TopicContext, USE_STATE, USE_EFFECT } from './context';
 
 import './App.css';
 
-const USE_STATE = 'USE_STATE';
-const USE_EFFECT = 'USE_EFFECT';
-
 function App() {
-  const [topic, setTopic] = useState(null);
+  const { topic, setTopic } = useContext(TopicContext);
 
   const handleOnSelect = (selectedTopic) => {
     setTopic(selectedTopic);
