@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
+
+import { counterReducer, initialCount, action } from './reducer';
 
 import './Counter.css';
 
 const Counter = (props) => {
-  const [count, setCount] = useState(0);
+  const [count, dispatch] = useReducer(counterReducer, initialCount);
 
   return (
     <div className="counter">
@@ -11,9 +13,9 @@ const Counter = (props) => {
         <p>Counter: {count}</p>
       </div>
       <div>
-        <button onClick={() => setCount(count + 1)}>+</button>
-        <button onClick={() => setCount(count - 1)}>-</button>
-        <button onClick={() => setCount(0)}>reset</button>
+        <button onClick={() => dispatch({ type: action.increment })}>+</button>
+        <button onClick={() => dispatch({ type: action.decrement })}>-</button>
+        <button onClick={() => dispatch({ type: action.reset })}>reset</button>
       </div>
     </div>
   );
