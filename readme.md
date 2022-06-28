@@ -14,5 +14,7 @@
 - [Part 3]()
   - useState
   - useEffect
+  - useContext
+  - useReducer
   - React rendering flow diagram
   - Lifting State & Co location
